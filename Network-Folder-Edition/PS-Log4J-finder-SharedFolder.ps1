@@ -1,7 +1,7 @@
 $ErrorActionPreference='SILENTLYCONTINUE';
 
 #Network location to send files
-$networklocation = '\\mis.local\share\testbed\o365installlogs'
+$networklocation = '\\server\share'
 
 
 #Delete any previous run finds

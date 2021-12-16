@@ -18,7 +18,6 @@ class GraylogMessage {[string] $short_message;[string] $full_message; [string] $
 
 #Check for finds and report status
 if($jar+$war+$dll){
-
 $Uri='http://{GRAYLOGIP}:{GRAYLOGPORT}/gelf';
 $Headers=@{'Content-Type'='application/json'};
 $Message=[GraylogMessage]::New();
@@ -26,9 +25,7 @@ $Message.source=$Env:computername;
 $Message.short_message='log4j Found';
 $Message.full_message=($jar+$war+$dll);
 Invoke-WebRequest -Uri $Uri -Method POST -Headers $Headers -Body (ConvertTo-Json $Message)
-
 } else {
-
 $Uri='http://{GRAYLOGIP}:{GRAYLOGPORT}/gelf';
 $Headers=@{'Content-Type'='application/json'};
 $Message=[GraylogMessage]::New();

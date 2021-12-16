@@ -17,7 +17,7 @@ $dll=Get-Content -Path ($Env:TEMP + '\log4j3.log');
 class GraylogMessage {[string] $short_message;[string] $full_message; [string] $source};
 
 #Check for finds and report status
-if(($jar+$war+$dll)-ne''){
+if($jar+$war+$dll){
 
 $Uri='http://{GRAYLOGIP}:{GRAYLOGPORT}/gelf';
 $Headers=@{'Content-Type'='application/json'};

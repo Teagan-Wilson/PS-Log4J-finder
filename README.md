@@ -1,5 +1,5 @@
 # PS-Log4J-finder
-Powershell + Findstr script to detect potentially exploitable log4j and send the results to Graylog.
+Powershell + Findstr script to detect potentially exploitable log4j 2.x.x (will not detect 1.x versions) and send the results to Graylog.
 
 
 This scans all local drives for .jar,.war,.dll, and .ear files for strings containing "JndiLookup.class" per CVE-2021-44228. 

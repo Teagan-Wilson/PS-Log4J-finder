@@ -27,7 +27,7 @@ class GraylogMessage {[string] $short_message;[string] $full_message; [string] $
 #Check for finds and report status
 if($jar+$war+$dll+$ear){
 
-$Uri='http://10.3.20.46:12001/gelf';
+$Uri='http://{GRAYLOGIP:PORTNUMBER}/gelf';
 $Headers=@{'Content-Type'='application/json'};
 $Message=[GraylogMessage]::New();
 $Message.source=$Env:computername;
@@ -37,7 +37,7 @@ Invoke-WebRequest -Uri $Uri -Method POST -Headers $Headers -Body (ConvertTo-Json
 
 } else {
 
-$Uri='http://10.3.20.46:12001/gelf';
+$Uri='http://{GRAYLOGIP:PORTNUMBER}/gelf';
 $Headers=@{'Content-Type'='application/json'};
 $Message=[GraylogMessage]::New();
 $Message.source=$Env:computername;

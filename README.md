@@ -15,3 +15,6 @@ Now has a version to send the results as log files to a shared network location 
 
 Both versions include escaped and minimized versions designed to be able to run as a scheduled task. 
 Personally I deployed this as a scheduled task via GPO running under system. 
+
+The Graylog ip and ports need to be filled in on the graylog version.
+The Shared Network version needs the network path filled in.

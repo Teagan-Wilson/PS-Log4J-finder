@@ -3,9 +3,9 @@ Powershell + Findstr script to detect potentially exploitable log4j 2.x.x (will 
 
 
 This scans all local drives for .jar,.war,.dll, and .ear files for strings containing "JndiLookup.class" per CVE-2021-44228. 
-Note that CVE-2021-44228 is resolved in 2.8.16. 
+Patched versions include Log4j 2.17.1 (Java 8), 2.12.4 (Java 7) and 2.3.2 (Java 6); these will still be detected by this script.
 
-Current mitigation for CVE-2021-44228 versions below 2.16.0 is to delete the class file (org/apache/logging/log4j/core/lookup/JndiLookup.class) completely from the jar/container file. 
+Current mitigation for CVE-2021-44228 impacted versions to delete the class file (org/apache/logging/log4j/core/lookup/JndiLookup.class) completely from the jar/container file. 
 
 See nist/cisa for latest guidence:
 https://nvd.nist.gov/vuln/detail/CVE-2021-44228
